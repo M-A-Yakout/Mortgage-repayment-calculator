@@ -33,17 +33,26 @@
     <form method="post">
       <div class="mortgage field">
         <label for="mortgageValue">Mortgage Amount</label>
-        <input type="number" placeholder="£" name="Mortgage" id="mortgageValue">
+        <div class="input-group">
+          <span class="perfix">£</span>
+          <input type="number" name="Mortgage" id="mortgageValue">
+        </div>
       </div>
 
-      <div class="mortgageTerm field">
+      <div class="mortgageTerm field spanRight">
         <label for="mortgageTerm">Mortgage Term</label>
-        <input type="number" placeholder="years" name="MortgageTerm" id="mortgageTerm">
+        <div class="input-group">
+          <input type="number" name="MortgageTerm" id="mortgageTerm">
+          <span class="suffix">years</span>
+        </div>
       </div>
 
-      <div class="interest field">
+      <div class="interest field spanRight">
         <label for="interestRate">Interest Rate</label>
-        <input type="number" placeholder="%" name="interest" id="interestRate">
+        <div class="input-group">
+          <input type="number" name="interest" id="interestRate">
+          <span class="suffix">%</span>
+        </div>
       </div>
     </form>
   </div>

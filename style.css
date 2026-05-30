@@ -36,6 +36,7 @@ body {
 
 .headTitle p {
     text-decoration: underline dashed;
+    cursor: pointer;
 }
 
 form {
@@ -49,11 +50,46 @@ form {
     flex-direction: column;
 }
 
-
-input::placeholder{
-    color: red;
+input {
+    height: 30px;
+    border: none;
 }
 
+.input-group {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border: 1px solid #ccc;
+    font-weight: 600;
+    color: #4e6e7e;
+}
+
+.input-group span {
+    position: absolute;
+    background-color: #e3f3fd;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.perfix{
+    left: 0;
+}
+
+.suffix {
+    right: 0;
+}
+
+
+.input-group input {
+    width: 100%;
+    padding-left: 40px;
+}
+
+.spanRight input {
+    padding: 0 40px;
+}
 
 .mortgage {
     width: 100%;
