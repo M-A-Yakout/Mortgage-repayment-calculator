@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "JakartaSans";
+    src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e3f3fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: "JakartaSans";
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    width: 80%;
+    padding: 20px;
+    color: #122f3f;
+    height: 80%;
+}
+
+.headTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headTitle p {
+    text-decoration: underline dashed;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+
+input::placeholder{
+    color: red;
+}
+
+
+.mortgage {
+    width: 100%;
+}
