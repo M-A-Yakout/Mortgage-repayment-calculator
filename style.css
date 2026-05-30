@@ -96,6 +96,7 @@ input {
 }
 
 .input-group input {
+    padding-left: 10px;
     width: 100%;
 }
 
@@ -107,6 +108,10 @@ input {
 
 .mortgage {
     width: 100%;
+}
+
+#mortgageValue{
+    padding-left: 40px;
 }
 
 .checkBox {
