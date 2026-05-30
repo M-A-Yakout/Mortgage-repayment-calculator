@@ -32,6 +32,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .headTitle p {
@@ -48,11 +49,13 @@ form {
 .field {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 input {
-    height: 30px;
     border: none;
+    outline: none;
+    height: 30px;
 }
 
 .input-group {
@@ -64,6 +67,7 @@ input {
     color: #4e6e7e;
 }
 
+
 .input-group span {
     position: absolute;
     background-color: #e3f3fd;
@@ -73,7 +77,7 @@ input {
     align-items: center;
 }
 
-.perfix{
+.perfix {
     left: 0;
 }
 
