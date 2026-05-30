@@ -13,17 +13,17 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Lime: hsl(61, 70%, 52%)
+- Lime: #d7da2f
 - Red: hsl(4, 69%, 50%)
 
 ### Neutral
 
 - White: hsl(0, 0%, 100%)
-- Slate 100: hsl(202, 86%, 94%)
-- Slate 300: hsl(203, 41%, 72%)
-- Slate 500: hsl(200, 26%, 54%)
-- Slate 700: hsl(200, 24%, 40%)
-- Slate 900: hsl(202, 55%, 16%)
+- Slate 100: #e3f3fd
+- Slate 300: #9abed5
+- Slate 500: #6b94a8
+- Slate 700: #4e6e7e
+- Slate 900: #122f3f
 
 ## Typography
 

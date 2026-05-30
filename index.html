@@ -25,52 +25,70 @@
 
 <body>
   <div class="card">
-    <div class="headTitle">
-      <h2>Mortgage Calculator</h2>
-      <p>Clear All</p>
+    <div class="card-left">
+      <div class="headTitle">
+        <h2>Mortgage Calculator</h2>
+        <p>Clear All</p>
+      </div>
+
+      <form method="post">
+        <div class="mortgage field">
+          <label for="mortgageValue">Mortgage Amount</label>
+          <div class="input-group">
+            <span class="perfix">£</span>
+            <input type="number" name="Mortgage" id="mortgageValue">
+          </div>
+        </div>
+
+        <div class="mortgageTerm field spanRight">
+          <label for="mortgageTerm">Mortgage Term</label>
+          <div class="input-group">
+            <input type="number" name="MortgageTerm" id="mortgageTerm">
+            <span class="suffix">years</span>
+          </div>
+        </div>
+
+        <div class="interest field spanRight">
+          <label for="interestRate">Interest Rate</label>
+          <div class="input-group">
+            <input type="number" name="interest" id="interestRate">
+            <span class="suffix">%</span>
+          </div>
+        </div>
+      </form>
+
+      <div class="checkBox">
+        <p>Mortgage Type</p>
+        <label>
+          <input type="radio" name="mortgageType" value="Repayment">
+          Repayment
+        </label>
+
+        <label>
+          <input type="radio" name="mortgageType" value="Interest">
+          Interest Only
+        </label>
+      </div>
+
+      <div class="calc">
+        <button><img src="assets/images/icon-calculator.svg" alt=""> Calculate Repayments</button>
+      </div>
+
     </div>
 
-    <form method="post">
-      <div class="mortgage field">
-        <label for="mortgageValue">Mortgage Amount</label>
-        <div class="input-group">
-          <span class="perfix">£</span>
-          <input type="number" name="Mortgage" id="mortgageValue">
-        </div>
+
+    <!-- Empty results start -->
+    <div class="card-right">
+      <div class="result">
+        <img src="assets/images/illustration-empty.svg" alt="">
+        <h2>Results shown here</h2>
+        <p>Complete the form and click “calculate repayments” to see what
+          your monthly repayments would be.</p>
       </div>
 
-      <div class="mortgageTerm field spanRight">
-        <label for="mortgageTerm">Mortgage Term</label>
-        <div class="input-group">
-          <input type="number" name="MortgageTerm" id="mortgageTerm">
-          <span class="suffix">years</span>
-        </div>
-      </div>
-
-      <div class="interest field spanRight">
-        <label for="interestRate">Interest Rate</label>
-        <div class="input-group">
-          <input type="number" name="interest" id="interestRate">
-          <span class="suffix">%</span>
-        </div>
-      </div>
-    </form>
+    </div>
+    <!-- Empty results end -->
   </div>
-
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
-
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
 
   <!-- Completed results start -->
 
@@ -84,7 +102,6 @@
   Total you'll repay over the term
 
   <!-- Completed results end -->
-
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
