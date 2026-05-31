@@ -78,7 +78,7 @@
 
 
     <!-- Empty results start -->
-    <div class="card-right">
+    <div style="display: none;" class="card-right">
       <div class="result">
         <img src="assets/images/illustration-empty.svg" alt="">
         <h2>Results shown here</h2>
@@ -88,20 +88,27 @@
 
     </div>
     <!-- Empty results end -->
+
+
+    <!-- Completed results start -->
+    <div id="showResult" class="card-right">
+      <div class="result-money">
+        <h2>Your results</h2>
+        <p>Your results are shown below based on the information you provided.
+          To adjust the results, edit the form and click “calculate repayments” again.
+        </p>
+        <div class="moneyCalc">
+          <p>Your monthly repayments</p>
+          <h1>£1,333.63</h1>
+          <hr>
+          <p>Total you'll repay over the term</p>
+          <h3>£241,3413.94</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Completed results end -->
   </div>
 
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided.
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.

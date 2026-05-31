@@ -19,7 +19,6 @@ body {
     font-family: "JakartaSans";
 }
 
-
 .card {
     margin-top: 50px;
     background: white;
@@ -171,4 +170,40 @@ input {
     text-align: center;
     height: 100%;
     color: white;
+}
+
+.result-money{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+    gap: 20px;
+    padding: 20px;
+}
+
+.moneyCalc{
+    border: 2px solid #0e2535;
+    border-top: 4px solid #d7da2f;
+    background-color: #0e2535;
+    padding: 20px;
+    border-radius: 5px;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.moneyCalc h1{
+    color: #d7da2f;
+}
+
+hr{
+    margin: 20px 0;
+    border: none;
+    height: 1px;
+    background-color: #344249;
+}
+.moneyCalc p {
+    color: #4e6e7e;
 }
