@@ -35,26 +35,29 @@
       <form method="post">
         <div class="mortgage field">
           <label for="mortgageValue">Mortgage Amount</label>
-          <div class="input-group">
+          <div class="input-group error-group">
             <span class="perfix">£</span>
             <input type="number" name="Mortgage" id="mortgageValue" required>
           </div>
+          <span class="error">This field is required</span>
         </div>
 
         <div class="mortgageTerm field spanRight">
           <label for="mortgageTerm">Mortgage Term</label>
-          <div class="input-group">
+          <div class="input-group  error-group">
             <input type="number" name="MortgageTerm" id="mortgageTerm" required>
             <span class="suffix">years</span>
           </div>
+          <span class="error">This field is required</span>
         </div>
 
         <div class="interest field spanRight">
           <label for="interestRate">Interest Rate</label>
-          <div class="input-group">
+          <div class="input-group  error-group">
             <input type="number" name="interest" id="interestRate" required>
             <span class="suffix">%</span>
           </div>
+          <span class="error">This field is required</span>
         </div>
       </form>
 
@@ -70,6 +73,8 @@
           Interest Only
         </label>
       </div>
+      <span class="error">This field is required</span>
+
 
       <div class="calc">
         <button id="calculate"><img src="assets/images/icon-calculator.svg" alt=""> Calculate Repayments</button>
@@ -79,7 +84,7 @@
 
 
     <!-- Empty results start -->
-    <div id="noResult"  class="card-right">
+    <div id="noResult" class="card-right">
       <div class="result">
         <img src="assets/images/illustration-empty.svg" alt="">
         <h2>Results shown here</h2>
@@ -92,7 +97,7 @@
 
 
     <!-- Completed results start -->
-    <div  id="showResult" class="card-right">
+    <div id="showResult" class="card-right">
       <div class="result-money">
         <h2>Your results</h2>
         <p>Your results are shown below based on the information you provided.

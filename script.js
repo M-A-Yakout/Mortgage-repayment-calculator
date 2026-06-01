@@ -10,6 +10,11 @@ const totalText = document.querySelector('.moneyCalc h3')
 const noResult = document.querySelector('#noResult');
 const showResult = document.querySelector('#showResult');
 
+document.querySelectorAll('.input-group').forEach(e => e.classList.remove('error-group'));
+document.querySelectorAll('.error').forEach(e => e.style.display = 'none');
+
+
+
 clearValue.onclick = () => {
     mortgageValue.value = '';
     mortgageTerm.value = '';
@@ -19,44 +24,68 @@ clearValue.onclick = () => {
 
 
 calculate.addEventListener('click', function () {
-    const select = document.querySelectorAll('input[name="mortgageType"]')
+    document.querySelectorAll('.input-group').forEach(e => e.classList.remove('error-group'));
+    document.querySelectorAll('.error').forEach(e => e.style.display = 'none');
+
+
+    let hasError = false;
+    if (!mortgageValue.value) {
+        mortgageValue.closest('.input-group').classList.add('error-group');
+        mortgageValue.closest('.field').querySelector('.error').style.display = 'block';
+        hasError = true;
+    }
+
+    if (!mortgageTerm.value) {
+        mortgageTerm.closest('.input-group').classList.add('error-group');
+        mortgageTerm.closest('.field').querySelector('.error').style.display = 'block';
+        hasError = true;
+    }
+
+    if (!interestRate.value) {
+        interestRate.closest('.input-group').classList.add('error-group');
+        interestRate.closest('.field').querySelector('.error').style.display = 'block';
+        hasError = true;
+    }
+    if (hasError) return;
+
+
+    const select = document.querySelector('input[name="mortgageType"]:checked')
 
     noResult.style.display = 'none';
     showResult.style.display = 'block'
     if (!select) {
         noResult.style.display = 'block';
-        showResult.style.display = 'none'
+        showResult.style.display = 'none';
+        return;
     }
-    mortgageCalc();
+    noResult.style.display = 'none';
+    showResult.style.display = 'block';
+    mortgageCalc(select.value);
 })
 
 
-function mortgageCalc() {
-    mortgageType.forEach(radio => {
-        radio.addEventListener('change', function () {
-            if (radio.value == 'Repayment') {
-                let monthlyRepayments;
-                let totalRepayments;
-                let p = Number(mortgageValue.value);
-                let n = Number(mortgageTerm.value * 12);
-                let r = Number((interestRate.value / 100) / 12);
+function mortgageCalc(type) {
+    if (type == 'Repayment') {
+        let monthlyRepayments;
+        let totalRepayments;
+        let p = Number(mortgageValue.value);
+        let n = Number(mortgageTerm.value * 12);
+        let r = Number((interestRate.value / 100) / 12);
 
-                monthlyRepayments = p * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1)
-                totalRepayments = monthlyRepayments * n
-                monthlyText.innerHTML = '£' + monthlyRepayments.toFixed(2);
-                totalText.innerHTML = '£' + totalRepayments.toFixed(2)
-            } else if (radio.value == 'Interest') {
-                let p = Number(mortgageValue.value);
-                let n = Number(mortgageTerm.value * 12)
-                let r = Number((interestRate.value / 100) / 12);
-                let Interest = p * r;
-                let totalInterset = Interest * n;
+        monthlyRepayments = p * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1)
+        totalRepayments = monthlyRepayments * n
+        monthlyText.innerHTML = '£' + monthlyRepayments.toFixed(2);
+        totalText.innerHTML = '£' + totalRepayments.toFixed(2)
+    } else if (type == 'Interest') {
+        let p = Number(mortgageValue.value);
+        let n = Number(mortgageTerm.value * 12)
+        let r = Number((interestRate.value / 100) / 12);
+        let Interest = p * r;
+        let totalInterset = Interest * n;
 
-                monthlyText.innerHTML = '£' + Interest.toFixed(2);
-                totalText.innerHTML = '£' + Interest.toFixed(2);
+        monthlyText.innerHTML = '£' + Interest.toFixed(2);
+        totalText.innerHTML = '£' + Interest.toFixed(2);
 
-            }
-        })
-    });
+    }
 }
 

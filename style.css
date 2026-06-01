@@ -229,11 +229,32 @@ hr {
         border-radius: 0;
     }
 
-    footer{
+    footer {
         display: none;
     }
 }
 
-#showResult{
+#showResult {
     display: none;
+}
+
+.error {
+    color: #d73328;
+    font-size: 12px;
+    font-weight: 600;
+    display: none;
+}
+
+.error-group {
+    border: 1px solid #d73328; 
+}
+
+.error-group .perfix,
+.error-group .suffix {
+    background-color: #d73328;
+    color: white;
+}
+
+.error-group input {
+    outline: none; 
 }
