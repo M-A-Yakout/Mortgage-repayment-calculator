@@ -11,6 +11,7 @@
   <title>Frontend Mentor | Mortgage repayment calculator</title>
   <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script src="script.js" defer></script>
   <style>
     .attribution {
       font-size: 0.6875rem;
@@ -28,7 +29,7 @@
     <div class="card-left">
       <div class="headTitle">
         <h2>Mortgage Calculator</h2>
-        <p>Clear All</p>
+        <p id="clearValue">Clear All</p>
       </div>
 
       <form method="post">
@@ -71,7 +72,7 @@
       </div>
 
       <div class="calc">
-        <button><img src="assets/images/icon-calculator.svg" alt=""> Calculate Repayments</button>
+        <button id="calculate"><img src="assets/images/icon-calculator.svg" alt=""> Calculate Repayments</button>
       </div>
 
     </div>
@@ -113,6 +114,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+
 </body>
 
 </html>

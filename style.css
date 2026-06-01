@@ -109,7 +109,7 @@ input {
     width: 100%;
 }
 
-#mortgageValue{
+#mortgageValue {
     padding-left: 40px;
 }
 
@@ -157,7 +157,7 @@ input {
 
 .card-right {
     background-color: #122f3f;
-    width: 60%;
+    flex: 1;
     border-radius: 0 10px 10px 50px;
     margin-left: 20px;
 }
@@ -172,7 +172,7 @@ input {
     color: white;
 }
 
-.result-money{
+.result-money {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -181,7 +181,7 @@ input {
     padding: 20px;
 }
 
-.moneyCalc{
+.moneyCalc {
     border: 2px solid #0e2535;
     border-top: 4px solid #d7da2f;
     background-color: #0e2535;
@@ -194,16 +194,40 @@ input {
     gap: 5px;
 }
 
-.moneyCalc h1{
+.moneyCalc h1 {
     color: #d7da2f;
 }
 
-hr{
+hr {
     margin: 20px 0;
     border: none;
     height: 1px;
     background-color: #344249;
 }
+
 .moneyCalc p {
     color: #4e6e7e;
+}
+
+
+@media screen and (max-width:375px) {
+    body {
+        background: white;
+        width: 100%;
+    }
+
+    .card {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .card-right {
+        flex-basis: 100%;
+        margin-left: 0;
+        border-radius: 0;
+    }
+
+    footer{
+        display: none;
+    }
 }
