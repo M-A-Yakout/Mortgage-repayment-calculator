@@ -31,8 +31,8 @@ mortgageType.forEach(radio => {
 
             monthlyRepayments = p * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1)
             totalRepayments = monthlyRepayments * n
-            monthlyRepaymentsText.innerHTML = '£ ' + monthlyRepayments.toFixed(2);
-            totalRepaymentsText.innerHTML = '£ ' + totalRepayments.toFixed(2)
+            monthlyRepaymentsText.innerHTML = '£' + monthlyRepayments.toFixed(2);
+            totalRepaymentsText.innerHTML = '£' + totalRepayments.toFixed(2)
         } else if (radio.value == 'Interest') {
 
         }
