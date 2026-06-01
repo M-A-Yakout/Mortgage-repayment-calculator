@@ -37,14 +37,14 @@
           <label for="mortgageValue">Mortgage Amount</label>
           <div class="input-group">
             <span class="perfix">£</span>
-            <input type="number" name="Mortgage" id="mortgageValue">
+            <input type="number" name="Mortgage" id="mortgageValue" required>
           </div>
         </div>
 
         <div class="mortgageTerm field spanRight">
           <label for="mortgageTerm">Mortgage Term</label>
           <div class="input-group">
-            <input type="number" name="MortgageTerm" id="mortgageTerm">
+            <input type="number" name="MortgageTerm" id="mortgageTerm" required>
             <span class="suffix">years</span>
           </div>
         </div>
@@ -52,7 +52,7 @@
         <div class="interest field spanRight">
           <label for="interestRate">Interest Rate</label>
           <div class="input-group">
-            <input type="number" name="interest" id="interestRate">
+            <input type="number" name="interest" id="interestRate" required>
             <span class="suffix">%</span>
           </div>
         </div>
@@ -79,7 +79,7 @@
 
 
     <!-- Empty results start -->
-    <div  style="display: none;" class="card-right">
+    <div id="noResult"  class="card-right">
       <div class="result">
         <img src="assets/images/illustration-empty.svg" alt="">
         <h2>Results shown here</h2>

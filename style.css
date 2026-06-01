@@ -233,3 +233,7 @@ hr {
         display: none;
     }
 }
+
+#showResult{
+    display: none;
+}
