@@ -25,6 +25,8 @@ body {
     border-radius: 10px;
     color: #122f3f;
     display: flex;
+    width: 50%;
+    height: 50%;
 }
 
 .card-left {
